@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>handling UserInput</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <div id="app-5">
+        <p>{{message}}</p>
+        <button v-on:click="reverseMessage">눌러</button>
+    </div>
+
+    <script>
+        var app5 = new Vue({
+           el : '#app-5',
+           data : {
+               message : '12234567889'
+           },
+           methods : {
+               reverseMessage : function(){
+                   alert(this.message);
+                   this.message = this.message.split('').reverse().join('');
+               }
+           }
+        });
+
+    </script>
+</body>
+</html>

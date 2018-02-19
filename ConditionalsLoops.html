@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conditionals and Loops</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <div id="app-3">
+        <p v-if="seen">이제 나를 볼수 있음</p>
+    </div>
+
+    <div id="app-4">
+        <ol>
+            <li v-for="todo in todos">{{todo.text}}</li>
+        </ol>
+    </div>
+
+    <script>
+        var app3 = new Vue({
+            el : '#app-3',
+            data : {
+                seen : true
+            }
+        });
+
+        var app4 = new Vue({
+            el : '#app-4',
+            data : {
+                todos : [
+                    {text : '와우'},
+                    {text : '와우2'}
+                ]
+            }
+        });
+
+        app4.todos.push({text:'와우3'});
+
+    </script>
+</body>
+</html>
